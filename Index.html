@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de DOM - Adicionar Parágrafo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #addParagraph {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #paragraphContainer {
+            margin-top: 20px;
+        }
+
+        p {
+            padding: 10px;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Manipulação de DOM - Adicionar Parágrafo</h1>
+
+    <button id="addParagraph">Adicionar Parágrafo</button>
+
+    <div id="paragraphContainer"></div>
+
+    <script>
+        // Adiciona um evento de clique ao botão para adicionar parágrafo
+        document.getElementById('addParagraph').addEventListener('click', function () {
+            addParagraph();
+        });
+
+        // Função para adicionar parágrafo ao contêiner
+        function addParagraph() {
+            var paragraphContainer = document.getElementById('paragraphContainer');
+            var newParagraph = document.createElement('p');
+            newParagraph.innerText = 'Novo Parágrafo Adicionado!';
+            paragraphContainer.appendChild(newParagraph);
+        }
+    </script>
+
+</body>
+</html>
